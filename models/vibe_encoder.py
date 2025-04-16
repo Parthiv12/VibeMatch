@@ -3,12 +3,20 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class VibeEncoder(nn.Module):
-    def __init__(self, input_dim=128, hidden_dims=[256, 128], latent_dim=64):
+    def __init__(self, input_dim=169344, hidden_dims=[1024, 512, 256], latent_dim=64):
         super(VibeEncoder, self).__init__()
+        
+        # Initial dimensionality reduction
+        self.dim_reduction = nn.Sequential(
+            nn.Linear(input_dim, 2048),
+            nn.ReLU(),
+            nn.BatchNorm1d(2048),
+            nn.Dropout(0.3)
+        )
         
         # Encoder layers
         encoder_layers = []
-        prev_dim = input_dim
+        prev_dim = 2048  # After dimensionality reduction
         for hidden_dim in hidden_dims:
             encoder_layers.extend([
                 nn.Linear(prev_dim, hidden_dim),
@@ -35,9 +43,20 @@ class VibeEncoder(nn.Module):
             prev_dim = hidden_dim
         
         self.decoder = nn.Sequential(*decoder_layers)
-        self.fc_recon = nn.Linear(hidden_dims[0], input_dim)
+        
+        # Final dimensionality expansion
+        self.dim_expansion = nn.Sequential(
+            nn.Linear(hidden_dims[0], 2048),
+            nn.ReLU(),
+            nn.BatchNorm1d(2048),
+            nn.Dropout(0.3),
+            nn.Linear(2048, input_dim)
+        )
         
     def encode(self, x):
+        # First reduce dimensionality
+        x = self.dim_reduction(x)
+        # Then encode
         h = self.encoder(x)
         mu = self.fc_mu(h)
         log_var = self.fc_var(h)
@@ -50,7 +69,8 @@ class VibeEncoder(nn.Module):
     
     def decode(self, z):
         h = self.decoder(z)
-        return self.fc_recon(h)
+        # Expand back to original dimensionality
+        return self.dim_expansion(h)
     
     def forward(self, x):
         mu, log_var = self.encode(x)

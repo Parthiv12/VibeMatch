@@ -1,16 +1,32 @@
+# Core dependencies
 torch>=1.9.0
 torchaudio>=0.9.0
 numpy>=1.19.2
-librosa>=0.8.1
-scikit-learn>=0.24.2
 pandas>=1.2.4
+scikit-learn>=0.24.2
+
+# Audio processing
+librosa>=0.8.1
+soundfile>=0.10.3
+pydub>=0.25.1
+
+# Visualization
 matplotlib>=3.3.4
+seaborn>=0.11.2
 tensorboard>=2.5.0
+torchviz>=0.0.2
+
+# API and utilities
 spotipy>=2.19.0
 python-dotenv>=0.19.0
 tqdm>=4.62.3
-soundfile>=0.10.3
-scipy>=1.7.1
+requests>=2.26.0
+
+# Deep learning
 tensorflow>=2.5.0
 tensorflow-hub>=0.12.0
-tensorflow-io>=0.18.0 
+
+# Additional utilities
+scipy>=1.7.1
+pillow>=8.3.1
+joblib>=1.0.1 

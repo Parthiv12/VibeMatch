@@ -1,0 +1,15 @@
+file_name,mood,feature_path
+Sneaky Spelunking - Joel Cummins.mp3,energetic,data/features\energetic\Sneaky Spelunking - Joel Cummins.npz
+Dark Elves - Jimena Contreras.mp3,energetic,data/features\energetic\Dark Elves - Jimena Contreras.npz
+"Raag Charukeshi - Drut Teentaal (Sitar, Tabla) - Sandeep Das,  Amrendra Mishra.mp3",energetic,"data/features\energetic\Raag Charukeshi - Drut Teentaal (Sitar, Tabla) - Sandeep Das,  Amrendra Mishra.npz"
+Best Besties - The Soundlings.mp3,energetic,data/features\energetic\Best Besties - The Soundlings.npz
+Sigma Slide - The Soundlings.mp3,energetic,data/features\energetic\Sigma Slide - The Soundlings.npz
+Dulce Sospecho - Cumbia Deli.mp3,energetic,data/features\energetic\Dulce Sospecho - Cumbia Deli.npz
+Treasure Hunt - Jeremy Korpas.mp3,energetic,data/features\energetic\Treasure Hunt - Jeremy Korpas.npz
+"Raag Yaman - Madhyalaya Ektaal (Voice, Sarangi, Tabla) - Sandeep Das,  Ujjwal Sahani,  Aneesh Mishra.mp3",happy,"data/features\happy\Raag Yaman - Madhyalaya Ektaal (Voice, Sarangi, Tabla) - Sandeep Das,  Ujjwal Sahani,  Aneesh Mishra.npz"
+"Bhaj Le Ram - Bhajan (Voice, Sarangi, Tabla) - Sandeep Das,  Ujjwal Sahani,  Aneesh Mishra.mp3",happy,"data/features\happy\Bhaj Le Ram - Bhajan (Voice, Sarangi, Tabla) - Sandeep Das,  Ujjwal Sahani,  Aneesh Mishra.npz"
+My First True Love - Jeremy Korpas.mp3,happy,data/features\happy\My First True Love - Jeremy Korpas.npz
+"Back in the Saddle - Dan _Lebo_ Lebowitz, Tone Seeker.mp3",happy,"data/features\happy\Back in the Saddle - Dan _Lebo_ Lebowitz, Tone Seeker.npz"
+Pajama Party - Jeremy Korpas.mp3,happy,data/features\happy\Pajama Party - Jeremy Korpas.npz
+"Come Along - Dan _Lebo_ Lebowitz, Tone Seeker.mp3",happy,"data/features\happy\Come Along - Dan _Lebo_ Lebowitz, Tone Seeker.npz"
+Rainbow Road - Jeremy Korpas.mp3,happy,data/features\happy\Rainbow Road - Jeremy Korpas.npz
